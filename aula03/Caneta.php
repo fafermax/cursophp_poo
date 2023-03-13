@@ -7,17 +7,17 @@ class Caneta {
     protected $tampada;
 
     public function rabiscar() {
-        if ($this->tampada) {
+        if ($this->tampada == true) {
             echo "<p>ERRO! Nao posso rabiscar!</p>";
         } else {
             echo "<p>Estou rabiscando!</p>";
         }
         
     }
-    private function tampar() {
+    public function tampar() {
         $this->tampada = true;
     }
-    private function destampar() {
+    public function destampar() {
         $this->tampada = false;
     }
 }

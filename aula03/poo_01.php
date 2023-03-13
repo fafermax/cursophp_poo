@@ -7,11 +7,17 @@
     <title>Aula 02 POO</title>
 </head>
 <body>
+    <pre>
     <?php 
         require_once "Caneta.php";
         $c1 = new Caneta;
         $c1->modelo = "BIC crystal";
-        var_dump($c1);
+        $c1->cor = "Azul";
+       // $c1->carga = 99;
+        $c1->rabiscar();
+        $c1->tampar();
+        print_r($c1);
     ?>
+    </pre>
 </body>
 </html>
