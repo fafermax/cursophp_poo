@@ -1,5 +1,6 @@
 <?php 
-    Class ControleRemoto {
+require_once "Controlador.php";
+    Class ControleRemoto implements Controlador {
         //Atributos
     
     private $volume;
@@ -33,7 +34,46 @@
     function setTocando($tocando) {
         $this->tocando = $tocando;
     }
-
+    public function abrirMenu()
+    {
+        
+    }
+    public function desligar()
+    {
+        
+    }
+    public function desligarMudo()
+    {
+        
+    }
+    public function fecharMenu()
+    {
+        
+    }
+    public function ligar()
+    {
+        
+    }
+    public function ligarMudo()
+    {
+        
+    }
+    public function maisVolume()
+    {
+        
+    }
+    public function menosVolume()
+    {
+        
+    }
+    public function pause()
+    {
+        
+    }
+    public function play()
+    {
+        
+    }
     }
 
 ?>
