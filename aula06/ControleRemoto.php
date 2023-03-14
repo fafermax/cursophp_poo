@@ -34,27 +34,34 @@ require_once "Controlador.php";
     function setTocando($tocando) {
         $this->tocando = $tocando;
     }
-    public function abrirMenu()
+    
+    public function ligar()
     {
-        
+        $this->setLigado(true);
     }
     public function desligar()
+    {
+        $this->setLigado(false);
+    }
+    public function abrirMenu()
+    {
+        echo "<br>Esta ligado?:" .($this->getLigado() ? "SIM" : "NAO");
+        echo "<br>Esta tocando?:".($this->getTocando() ? "SIM" : "NAO");
+        echo "<br>Volume: ".$this->getVolume();
+        for ($i = 0; $i <= $this->getVolume(); $i+=10) {
+            echo "|";
+        }
+        echo "<br>";
+    }
+    public function fecharMenu()
+    {
+        echo "<br>Fechando o Menu...";
+    }
+    public function ligarMudo()
     {
         
     }
     public function desligarMudo()
-    {
-        
-    }
-    public function fecharMenu()
-    {
-        
-    }
-    public function ligar()
-    {
-        
-    }
-    public function ligarMudo()
     {
         
     }
