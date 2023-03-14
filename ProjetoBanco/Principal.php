@@ -7,6 +7,13 @@
     <title>Projeto Banco</title>
 </head>
 <body>
-    
+    <?php 
+        require_once "ContaBanco.php";
+        $p1 = new ContaBanco(); //Joao
+        $p2 = new ContaBanco(); // Maria
+
+        
+
+    ?>
 </body>
 </html>

@@ -7,7 +7,7 @@
         private $saldo;
         private $status;
 
-    }
+   
 
     //metodos
     public function abrirConta($t) {
@@ -21,17 +21,16 @@
     }
     public function fecharConta() {
         if ($this->getSaldo() > 0) {
-            echo "<p>Conta ainda com dinheiro, nao e possivel fecha-la!</p>"
+            echo "<p>Conta ainda com dinheiro, nao e possivel fecha-la!</p>";
         } elseif ($this->getSaldo() < 0) {
-            echo "<p>Esta conta esta em debito, nao e possivel encerrar!</p>"
+            echo "<p>Esta conta esta em debito, nao e possivel encerrar!</p>";
         } else {
             $this->setStatus(false);
         }
     }
     public function depositar($v) {
         if ($this->getStatus()) {
-            $this->setSaldo($this->getSaldo() + $v)
-        // $this->saldo = $this->saldo + $v; e a mesma coisa escrita da maneira antiga.
+            $this->setSaldo($this->getSaldo() + $v);
         } else {
             echo "<p>Conta fechada. Nao e possivel depositar</p>";
         }
@@ -41,7 +40,7 @@
             if ($this->getSaldo() > $v) {
                 $this->setSaldo($this->getSaldo() - $v);
             } else {
-                echo "<p>Saldo insuficiente para saque.</p>"
+                echo "<p>Saldo insuficiente para saque.</p>";
             }
         } else {
             echo "<p>Nao e possivel sacar de uma conta encerrada.</p>";
@@ -63,6 +62,7 @@
     public function __contruct() {
         $this->$saldo = 0;
         $this->status = false;
+        echo "<p>Conta criada com sucesso!</p>";
     }
     public function getnumConta() {
         return $this->numConta;
@@ -94,4 +94,5 @@
     public function setStatus($status) {
         $this->status = $status;
     }
+}
 ?>
