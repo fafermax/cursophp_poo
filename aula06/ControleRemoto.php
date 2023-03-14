@@ -8,7 +8,7 @@ require_once "Controlador.php";
     private $tocando;
         //Metodos especiais
 
-    function __construct() {
+    public function __construct() {
         $this->volume = 50;
         $this->ligado = false;
         $this->tocando = false;
@@ -16,22 +16,22 @@ require_once "Controlador.php";
 
     //getter e setters
 
-    function getVolume() {
+    private function getVolume() {
         return $this->volume;
     }
-    function getLigado() {
+    private function getLigado() {
         return $this->ligado;
     }
-    function getTocando() {
+    private function getTocando() {
         return $this->tocando;
     }
-    function setVolume($volume) {
+    private function setVolume($volume) {
         $this->volume = $volume;
     }
-    function setLigado($ligado) {
+    private function setLigado($ligado) {
         $this->ligado = $ligado;
     }
-    function setTocando($tocando) {
+    private function setTocando($tocando) {
         $this->tocando = $tocando;
     }
     
@@ -49,7 +49,7 @@ require_once "Controlador.php";
         echo "<br>Esta tocando?:".($this->getTocando() ? "SIM" : "NAO");
         echo "<br>Volume: ".$this->getVolume();
         for ($i = 0; $i <= $this->getVolume(); $i+=10) {
-            echo "|";
+            echo "|||||";
         }
         echo "<br>";
     }
@@ -61,12 +61,16 @@ require_once "Controlador.php";
     {
         if ($this->getLigado()) {
             $this->setVolume($this->getVolume() + 5);
+        } else {
+            echo "ERRO! EQUIPAMENTO DESLIGADO.";
         }
     }
     public function menosVolume()
     {
         if ($this->getLigado()) {
             $this->setLigado($this->getVolume() - 5);
+        } else {
+            echo "ERRO EQUIPAMENTO DESLIGADO.";
         }
     }
     public function ligarMudo()
