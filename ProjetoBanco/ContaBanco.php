@@ -26,6 +26,7 @@
             echo "<p>Esta conta esta em debito, nao e possivel encerrar!</p>";
         } else {
             $this->setStatus(false);
+            echo "<p>Conta de ".$this->getDono()." fechada com sucesso</p>";
         }
     }
     public function depositar($v) {
@@ -38,7 +39,7 @@
     }
     public function sacar($v) {
         if ($this->getStatus()) {
-            if ($this->getSaldo() > $v) {
+            if ($this->getSaldo() >= $v) {
                 $this->setSaldo($this->getSaldo() - $v);
                 echo "<p>Saque de R$:$v autorizado na conta de: ".$this->getDono()."</p>";
             } else {

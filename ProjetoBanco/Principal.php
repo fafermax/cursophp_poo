@@ -34,6 +34,16 @@
         $p1->pagarMensal();
         $p2->pagarMensal();
 
+        //sacando o saldo da conta para poder fechar
+
+        $p1->sacar(338);
+        $p2->sacar(530);
+
+        //fechando as duas contas , fica:
+
+        $p1->fecharConta();
+        $p2->fecharConta(); // vai informar que nao pode porque tem saldo!
+
         print_r($p1);
         print_r($p2);
 
