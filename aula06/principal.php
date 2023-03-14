@@ -7,8 +7,9 @@
     <title>Aula 06 - Controlador</title>
 </head>
 <body>
+    <h1>Projeto - Controle Remoto</h1>
     <?php 
-    
+
     ?>
 </body>
 </html>
