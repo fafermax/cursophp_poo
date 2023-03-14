@@ -10,6 +10,7 @@
         public abstract function desligarMudo();
         public abstract function play();
         public abstract function pause();
+        
     }
 
 ?>
