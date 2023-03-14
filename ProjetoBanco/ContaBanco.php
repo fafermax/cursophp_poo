@@ -31,6 +31,7 @@
     public function depositar($v) {
         if ($this->getStatus()) {
             $this->setSaldo($this->getSaldo() + $v);
+            echo "<p>Deposito de R$:$v na conta de:".$this->getDono()."</p>";
         } else {
             echo "<p>Conta fechada. Nao e possivel depositar</p>";
         }
@@ -39,6 +40,7 @@
         if ($this->getStatus()) {
             if ($this->getSaldo() > $v) {
                 $this->setSaldo($this->getSaldo() - $v);
+                echo "<p>Saque de R$:$v autorizado na conta de: ".$this->getDono()."</p>";
             } else {
                 echo "<p>Saldo insuficiente para saque.</p>";
             }
@@ -54,44 +56,45 @@
         }
         if ($this->getStatus()) {
             $this->setSaldo($this->getSaldo() - $v);
+            echo "<p>Mensalidade de R$:$v debitada na conta:".$this->getDono()."</p>";
         } else {
             echo "<p>Voce possui problemas com essa conta!, Contate sua agencia.</p>";
         }
     }
     //metodo especial
-    function __contruct() {
+    function __construct() {
         $this->setSaldo(0);
         $this->setStatus(false);
         echo "<p>Conta criada com sucesso!</p>";
     }
-    public function getnumConta() {
+    function getnumConta() {
         return $this->numConta;
     }
-    public function setnumConta($n) {
+    function setnumConta($n) {
         $this->numConta = $n;
     }
-    public function getTipo() {
+    function getTipo() {
         return $this->tipo;
     }
-    public function setTipo($tipo) {
+    function setTipo($tipo) {
         $this->tipo = $tipo;
     }
-    public function getDono() {
+    function getDono() {
         return $this->dono;
     }
-    public function setDono($dono) {
+    function setDono($dono) {
         $this->dono = $dono;
     }
-    public function getSaldo() {
+    function getSaldo() {
         return $this->saldo;
     }
-    public function setSaldo($saldo) {
+    function setSaldo($saldo) {
         $this->saldo = $saldo;
     }
-    public function getStatus() {
+    function getStatus() {
         return $this->status;
     }
-    public function setStatus($status) {
+    function setStatus($status) {
         $this->status = $status;
     }
 }
