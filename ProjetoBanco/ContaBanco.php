@@ -59,7 +59,7 @@
         }
     }
     //metodo especial
-    public function __contruct() {
+    function __contruct() {
         $this->setSaldo(0);
         $this->setStatus(false);
         echo "<p>Conta criada com sucesso!</p>";
