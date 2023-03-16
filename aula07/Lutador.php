@@ -14,11 +14,11 @@
         //Metodos Internos
         function apresentar() {
             echo "<p>**************************************************************************</p>";
-            echo "<p>CHEGOU A HORA! O Lutador" . $this->getNome();
-            echo "Veio diretamente de" . $this->getNacionalidade();
-            echo "tem" . $this->getIdade() . "anos e pesa" . $this->getPeso() . "Kg";
-            echo "<br>Ele tem" . $this->getVitorias() . "vitorias";
-            echo $this->getDerrotas() . "Derrotas e " . $this->getEmpates() . "Empates";
+            echo "<p>CHEGOU A HORA! O Lutador " . $this->getNome();
+            echo " diretamente de " . $this->getNacionalidade();
+            echo " tem " . $this->getIdade() . " anos e pesa " . $this->getPeso() . "Kg";
+            echo "<br>com " . $this->getVitorias() . " vitorias ";
+            echo $this->getDerrotas() . " Derrotas e " . $this->getEmpates() . " Empates";
             
         }
         function status() {
