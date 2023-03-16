@@ -13,19 +13,26 @@
         
         //Metodos Internos
         function apresentar() {
-
+            echo "<p>***************************</p>";
+            echo "<p>CHEGOU A HORA! O Lutador" + $this->getNome();
+            echo "Veio diretamente de" + $this->getNacionalidade();
+            echo "tem" + $this->getIdade() + "anos e pesa" + $this->getPeso() + "Kg";
+            echo "<br>Ele tem" + $this->getVitorias() + "vitorias";
+            echo $this->getDerrotas() + "Derrotas e " + $this->getEmpates() + "Empates";
         }
         function status() {
-
+            echo "<p>***************************</p>";
+            echo "<p>" + $this->getNome() + "e um peso" + $this->getCategoria();
+            echo $
         }
         function ganharLuta() {
-
+            $this->setVitorias($this->getVitorias() + 1);
         }
         function perderLuta() {
-
+            $this->setDerrotas($this->getDerrotas() + 1);
         }
         function empatarLuta() {
-
+            $this->setEmpates($this->getEmpates() + 1);
         }
 
         //Metodos Especiais
@@ -89,7 +96,17 @@
             $this->setCategoria();
         }
         function setCategoria() {
-            
+            if ($this->peso < 52.2) {
+                $this->categoria = "Invalido!";
+            } elseif ($this->peso <= 70.3) {
+                $this->categoria = "Leve";
+            } elseif ($this->peso <= 83.9) {
+                $this->categoria = "Medio";
+            } elseif ($this->peso <= 120.2) {
+                $this->categoria = "Pesado";
+            } else {
+                $this->categoria = "Invalido!!";
+            }
         }
         function setVitorias($vitorias) {
             $this->vitorias = $vitorias;
