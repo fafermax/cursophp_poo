@@ -13,19 +13,20 @@
         
         //Metodos Internos
         function apresentar() {
-            echo "<p>***************************</p>";
+            echo "<p>**************************************************************************</p>";
             echo "<p>CHEGOU A HORA! O Lutador" . $this->getNome();
             echo "Veio diretamente de" . $this->getNacionalidade();
             echo "tem" . $this->getIdade() . "anos e pesa" . $this->getPeso() . "Kg";
             echo "<br>Ele tem" . $this->getVitorias() . "vitorias";
             echo $this->getDerrotas() . "Derrotas e " . $this->getEmpates() . "Empates";
+            
         }
         function status() {
-            echo "<p>***************************</p>";
-            echo "<p>" . $this->getNome() . "e um peso" . $this->getCategoria();
-            echo "e ja ganhou " . $this->getVitorias() . " Vezes";
-            echo "e perdeu " . $this->getDerrotas() . " Vezes";
-            echo "empatou " . $this->getEmpates() . " Vezes";
+            echo "<p>***************************************************************************</p>";
+            echo "<p>" . $this->getNome() . " e um peso " . $this->getCategoria();
+            echo " e ja ganhou " . $this->getVitorias() . " vezes";
+            echo " e perdeu " . $this->getDerrotas() . " vezes";
+            echo " empatou " . $this->getEmpates() . " vezes";
         }
         function ganharLuta() {
             $this->setVitorias($this->getVitorias() + 1);
@@ -44,7 +45,7 @@
             $this->nacionalidade = $na;
             $this->idade = $id;
             $this->altura = $al;
-            $this->peso = $pe;
+            $this->setPeso($pe);
             $this->vitorias = $vi;
             $this->derrotas = $de;
             $this->empates = $em;
@@ -97,7 +98,7 @@
             $this->peso = $peso;
             $this->setCategoria();
         }
-        function setCategoria() {
+        private function setCategoria() {
             if ($this->peso < 52.2) {
                 $this->categoria = "Invalido!";
             } elseif ($this->peso <= 70.3) {
