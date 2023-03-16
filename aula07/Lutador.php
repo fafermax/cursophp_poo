@@ -14,16 +14,18 @@
         //Metodos Internos
         function apresentar() {
             echo "<p>***************************</p>";
-            echo "<p>CHEGOU A HORA! O Lutador" + $this->getNome();
-            echo "Veio diretamente de" + $this->getNacionalidade();
-            echo "tem" + $this->getIdade() + "anos e pesa" + $this->getPeso() + "Kg";
-            echo "<br>Ele tem" + $this->getVitorias() + "vitorias";
-            echo $this->getDerrotas() + "Derrotas e " + $this->getEmpates() + "Empates";
+            echo "<p>CHEGOU A HORA! O Lutador" . $this->getNome();
+            echo "Veio diretamente de" . $this->getNacionalidade();
+            echo "tem" . $this->getIdade() . "anos e pesa" . $this->getPeso() . "Kg";
+            echo "<br>Ele tem" . $this->getVitorias() . "vitorias";
+            echo $this->getDerrotas() . "Derrotas e " . $this->getEmpates() . "Empates";
         }
         function status() {
             echo "<p>***************************</p>";
-            echo "<p>" + $this->getNome() + "e um peso" + $this->getCategoria();
-            echo $
+            echo "<p>" . $this->getNome() . "e um peso" . $this->getCategoria();
+            echo "e ja ganhou " . $this->getVitorias() . " Vezes";
+            echo "e perdeu " . $this->getDerrotas() . " Vezes";
+            echo "empatou " . $this->getEmpates() . " Vezes";
         }
         function ganharLuta() {
             $this->setVitorias($this->getVitorias() + 1);
