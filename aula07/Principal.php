@@ -17,9 +17,7 @@
         $l[3] = new Lutador("Deadcode", "Australia", 28, 1.93, 81.6, 13, 0, 2);
         $l[4] = new Lutador("Ufocobol", "Brasil", 37, 1.70, 119.3, 5, 4, 3);
         $l[5] = new Lutador("Nerdart", "EUA", 30, 1.81, 105.7, 12, 2, 4);
-        $l[3]->apresentar();
-        $l[3]->status();
-
+       
     ?>
     </pre>
 </body>
