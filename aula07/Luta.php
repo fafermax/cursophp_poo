@@ -13,7 +13,7 @@
     //Metodos Publicos
  
     public function marcarLuta($l1, $l2) {
-        if ($l1.getCategoria() == $l2.getCategoria() && ($l1 != $l2)) {
+        if ($l1->getCategoria() === $l2->getCategoria() && ($l1 != $l2)) {
             $this->aprovada = true;
             $this->desafiado = $l1;
             $this->desafiante = $l2;
@@ -40,7 +40,7 @@
                     $this->desafiante->perderLuta();
                     break;
                 case 2: //Desafiante vence
-                    echo "<p>".$this->desafiante->getNome()."Venceu</p>" 
+                    echo "<p>".$this->desafiante->getNome()."Venceu</p>";
                     $this->desafiante->ganharLuta();
                     $this->desafiado->perderLuta();
                     break;
